@@ -1,0 +1,40 @@
+################################################
+#	CMake requirement
+################################################
+cmake_minimum_required(VERSION 2.8.11)
+
+
+MESSAGE(STATUS "The Windows CMake file is called!")
+
+
+
+################################################
+#	Package Finding
+################################################
+#	1. QT 
+
+set(Qt5_DIR ¡°C:\\Qt\\Qt5.9.2\\5.9.2\\msvc2015)
+
+# Find includes in corresponding build directories
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+# Instruct CMake to run moc automatically when needed.
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
+
+# Find the QtWidgets library
+find_package(Qt5Widgets REQUIRED)  
+find_package(Qt5Core REQUIRED)
+find_package(Qt5Gui REQUIRED)
+find_package(Qt5OpenGL REQUIRED)
+
+
+################################################
+#	Copy the binary bin files
+################################################
+set(Solution_DebugBin_Dir ${PROJECT_BINARY_DIR}/Debug)
+set(Solution_ReleaseBin_Dir ${PROJECT_BINARY_DIR}/Release)
+
+file(COPY "./bin_win/" DESTINATION ${Solution_DebugBin_Dir})
+file(COPY "./bin_win/" DESTINATION ${Solution_ReleaseBin_Dir})
+
