@@ -1,7 +1,7 @@
 # nus_mico
 Kinova Mico2 Project
 
-![MICO2 Arm](/images/mico-26-2f.jpg)
+![MICO2 Arm](/images/mico-6d-2f.jpg)
 
 ## 1. Introduction
 This is a CMake project for KINOVA robot arm MICO2. This project is originally designed under
