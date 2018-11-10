@@ -9,11 +9,11 @@ Windows with official KINOVA driver. In the future we would like to write the CM
 
 ## 2. Make
 
-`mkdir build
+`mkdir build`
 
-cd build
+`cd build`
 
-cmake ..`
+`cmake ..`
 
 Then the vs project could be opened and compiled.
 
